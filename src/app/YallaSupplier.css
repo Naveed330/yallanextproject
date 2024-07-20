@@ -1,0 +1,22 @@
+.yalla_supplier_text{
+    color: rgba(50, 50, 50, 0.43);
+    leading-trim: both;
+    text-edge: cap;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: 0.286px;
+    text-align: center;
+    margin-top: 7%;
+}
+
+.card_container_supplier {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  
+  
