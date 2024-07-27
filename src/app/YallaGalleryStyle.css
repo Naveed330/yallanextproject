@@ -1,0 +1,284 @@
+.yalla_gallery_title {
+    color: rgba(50, 50, 50, 0.43);
+    leading-trim: both;
+    text-edge: cap;
+    font-family: Inter;
+    font-size: 28.629px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: 0.286px;
+    text-align: center;
+    margin-top: 7%;
+}
+
+.Yalla_gallery_heading {
+    color: #4BC6DA;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: Inter;
+    font-size: 54.076px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 100%;
+    letter-spacing: 0.541px;
+    text-align: center;
+    margin-top: 3%;
+}
+
+.yalla_gallery_column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.yalla_gallery_des {
+    color: #000;
+    text-align: center;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: Inter;
+    font-size: 19.086px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0.191px;
+    margin-top: 1%;
+}
+
+.card-title {
+    color: #262626;
+    font-size: 1.5em;
+    line-height: normal;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+}
+
+.small-desc {
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.5em;
+    color: #452c2c;
+}
+
+.small-desc {
+    font-size: 1em;
+}
+
+.go-corner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    background: linear-gradient(135deg, #6293c8, #384c6c);
+    border-radius: 0 4px 0 32px;
+}
+
+.go-arrow {
+    margin-top: -4px;
+    margin-right: -4px;
+    color: white;
+    font-family: courier, sans;
+}
+
+.yalla_card_gallery {
+    display: block;
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    background-color: #f2f8f9;
+    border-radius: 10px;
+    margin: 12px;
+    text-decoration: none;
+    z-index: 0;
+    overflow: hidden;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(75, 198, 218, 0.5));
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+.yalla_card_gallery:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: -16px;
+    right: -16px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(75, 198, 218, 0.7));
+    height: 32px;
+    width: 32px;
+    border-radius: 32px;
+    transform: scale(1);
+    transform-origin: 50% 50%;
+    transition: transform 0.35s ease-out;
+}
+
+.yalla_card_gallery:hover:before {
+    transform: scale(28);
+}
+
+.yalla_card_gallery:hover .small-desc {
+    transition: all 0.5s ease-out;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.yalla_card_gallery:hover .card-title {
+    transition: all 0.5s ease-out;
+    color: #ffffff;
+}
+
+.card-image {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    border-radius: 10px;
+}
+
+.card-image:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+
+
+.main-container__marquee {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100vw;
+    max-width: 100%;
+    min-height: 2rem;
+    overflow-x: hidden;
+    font-family: "Merriweather", serif;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: black;
+    background: linear-gradient(135deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(75, 198, 218, 0));
+    margin: 10% 0 0;
+}
+.container__marquee_below{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100vw;
+    max-width: 100%;
+    min-height: 2rem;
+    overflow-x: hidden;
+    font-family: "Merriweather", serif;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: black;
+    background: linear-gradient(135deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(75, 198, 218, 0));
+    margin: 30px 0 0;
+}
+
+.main-container__marquee-track {
+    display: flex;
+    gap: 20px;
+    white-space: nowrap;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+}
+
+.main-container__marquee-items {
+    flex-shrink: 0;
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    min-width: 100%;
+    animation: marquee 250s linear infinite;
+    color: #4BC6DA;
+    text-align: center;
+    font-family: 'poppins sans-serif';
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: 2.66px;
+
+}
+
+.main-container__marquee-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    width: auto;
+    transition: all 0.1s ease-in-out;
+    color: #4BC6DA;
+    text-align: center;
+    font-family: 'poppins sans-serif';
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: 2.66px;
+}
+
+.gallery_row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
+@media (max-width:1000px) and (min-width:200px) {
+    .main-container__marquee-item {
+        font-size: 40px !important;
+    }
+    .gallerytextlogo{
+        width: 80%;
+        height: 80%;
+    }
+}
+
+@media(max-width:600px) {
+    .yalla_gallery_column {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 65%;
+    }
+    .gallerytextlogo{
+        width: 80%;
+        height: 80%;
+    }
+}

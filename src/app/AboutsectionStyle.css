@@ -21,6 +21,7 @@
 
 .image_yalla_about {
     transition: transform 0.5s ease-out;
+    width: 100%;
 }
 
 .image-container:hover .image_yalla_about {
@@ -70,6 +71,31 @@
     .yallaaBOUTText {
         font-size: 1rem;
     }
+
+    /* Disable animation */
+    [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    .image_yalla_about {
+        transition: none;
+    }
+
+    .image-container:hover .image_yalla_about {
+        transform: none;
+    }
+
+    .image_yalla_about {
+        width: 70% !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .yallaaboutlogo {
+        width: 50%;
+        height: 45%;
+    }
 }
 
 @media (max-width: 480px) {
@@ -80,5 +106,19 @@
     .text-container,
     .image-container {
         padding: 5px;
+    }
+
+    /* Disable animation */
+    [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    .image_yalla_about {
+        transition: none;
+    }
+
+    .image-container:hover .image_yalla_about {
+        transform: none;
     }
 }

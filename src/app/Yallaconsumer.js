@@ -1,64 +1,53 @@
-"use client"
 import React, { useEffect } from 'react';
+import './YallaConsumer.css';
+import { Container, Row, Col } from 'react-bootstrap';
+import cosumerone from './Assets/HomePageAssets/cosumerone.png';
+import cosumertwo from './Assets/HomePageAssets/cosumertwo.png';
+import cosumerthree from './Assets/HomePageAssets/cosumerthree.png';
+import cosumerfour from './Assets/HomePageAssets/cosumerfour.png';
+import cosumerfive from './Assets/HomePageAssets/cosumerfive.png';
+import cosumersix from './Assets/HomePageAssets/cosumersix.png';
+import cosumerseven from './Assets/HomePageAssets/cosumerseven.png';
+import cosumereight from './Assets/HomePageAssets/cosumereight.png';
+import Image from 'next/image';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { Container } from 'react-bootstrap';
-import Image from 'next/image';
-import { Carousel } from 'react-responsive-3d-carousel';
-import './YallaConsumer.css';
-import yallaconsumer from '../app/assets/yallaconsumer.png';
-import cocacola from '../app/assets/cocacola.png';
 
-const Yallaconsumer = () => {
+const Page = () => {
     useEffect(() => {
-        AOS.init({
-            duration: 2000,
-        });
+        AOS.init({ duration: 1000 });
     }, []);
 
-    return (
-        <Container fluid>
-            <h1 className='yalla_consumer_text'>Our Consumer</h1>
-            <Carousel
-                showStatus={false}
-                statusSize={'small'}
-                statusColor={'rgb(255, 255, 255)'}
-                showArrows={true}         // Show navigation arrows
-                autoPlay={true}          // Enable automatic scrolling
-                interval={3000}          // Set interval for automatic scrolling
-                showThumbs={false}      // Hide thumbnails
-                showIndicators={true}   // Show indicators (dots)
-            >
-                <div className="carousel-item">
-                    <Image src={yallaconsumer} alt="yallaconsumer" width={200} height={200} />
-                </div>
-                <div className="carousel-item">
-                    <Image src={cocacola} alt="cocacola" width={200} height={200} />
-                </div>
-                <div className="carousel-item">
-                    <Image src={yallaconsumer} alt="yallaconsumer" width={200} height={200} />
-                </div>
-                <div className="carousel-item">
-                    <Image src={cocacola} alt="cocacola" width={200} height={200} />
-                </div>
-                <div className="carousel-item">
-                    <Image src={yallaconsumer} alt="yallaconsumer" width={200} height={200} />
-                </div>
-                <div className="carousel-item">
-                    <Image src={cocacola} alt="cocacola" width={200} height={200} />
-                </div>
-                <div className="carousel-item">
-                    <Image src={yallaconsumer} alt="yallaconsumer" width={200} height={200} />
-                </div>
-                <div className="carousel-item">
-                    <Image src={cocacola} alt="cocacola" width={200} height={200} />
-                </div>
-                <div className="carousel-item">
-                    <Image src={yallaconsumer} alt="yallaconsumer" width={200} height={200} />
-                </div>
-            </Carousel>
-        </Container>
-    );
-};
+    const images = [
+        { src: cosumerone, alt: 'cosumerone' },
+        { src: cosumertwo, alt: 'cosumertwo' },
+        { src: cosumerthree, alt: 'cosumerthree' },
+        { src: cosumerfour, alt: 'cosumerfour' },
+        { src: cosumerfive, alt: 'cosumerfive' },
+        { src: cosumersix, alt: 'cosumersix' },
+        { src: cosumerseven, alt: 'cosumerseven' },
+        { src: cosumereight, alt: 'cosumereight' },
+    ];
 
-export default Yallaconsumer;
+    return (
+        <div>
+            <h1 className='yalla_titile' data-aos="fade-up" >Yalla <span className='product_title'>Consumer</span></h1>
+            <Container className='Consumer_container'>
+                <Row>
+                    {images.map((image, index) => (
+                        <Col
+                            key={index}
+                            xs={3} md={4} lg={3}
+                            className="image-col"
+                            data-aos="fade-up"
+                        >
+                            <Image src={image.src} alt={image.alt} />
+                        </Col>
+                    ))}
+                </Row>
+            </Container>
+        </div>
+    );
+}
+
+export default Page;

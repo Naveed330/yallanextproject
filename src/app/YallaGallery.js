@@ -1,19 +1,18 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-import './Gallerystyle.css';
+import './YallaGalleryStyle.css';
 import { Container, Row, Col } from 'react-bootstrap';
 import Image from 'next/image';
-import galleryone from '../app/assets/galleryone.png';
-import gallerytwo from '../app/assets/gallerytwo.png';
-import gallerythree from '../app/assets/gallerythree.png';
-import galleryfour from '../app/assets/galleryfour.png';
-import galleryfive from '../app/assets/galleryfive.png';
-import gallerysix from '../app/assets/gallerysix.png';
-import galleryseven from '../app/assets/galleryseven.png';
-import galleryeight from '../app/assets/galleryeight.png';
-import Animatedcard from '../app/Animatedcard'
-import AboutSection from '../app/AboutSection'
-import  YallaSupplier from '../app/YallaSupplier'
+import galleryone from '../app/assets/HomePageAssets/galleryone.png';
+import gallerytwo from '../app/assets/HomePageAssets/gallerytwo.png';
+import gallerythree from '../app/assets/HomePageAssets/gallerythree.png';
+import galleryfour from '../app/assets/HomePageAssets/galleryfour.png';
+import galleryfive from '../app/assets/HomePageAssets/galleryfive.png';
+import gallerysix from '../app/assets/HomePageAssets/gallerysix.png';
+import galleryseven from '../app/assets/HomePageAssets/galleryseven.png';
+import galleryeight from '../app/assets/HomePageAssets/galleryeight.png';
+import eatgoodloog from '../app/Assets/HomePageAssets/eatgoodloog.png'
+import gallerytextlogo from '../app/Assets/HomePageAssets/gallerytextlogo.png'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -69,7 +68,7 @@ const cardData = [
 ];
 
 const Page = () => {
-    
+
     useEffect(() => {
         AOS.init({
             duration: 2000,
@@ -77,25 +76,49 @@ const Page = () => {
     }, []);
 
     return (
-        <div className='Main_container' >
-            <AboutSection />
-            <Animatedcard />
+        <>
             <Container fluid>
-                <article class="main-container__marquee" data-aos="fade-up" data-aos-delay="300">
+                <article class="main-container__marquee" data-aos="fade-up">
                     <div class="main-container__marquee-track">
                         <div class="main-container__marquee-items">
-                            <span class="main-container__marquee-item">EAT GOOD FEEL GOOD EAT GOOD FEEL GOOD EAT GOOD FEEL GOOD</span>
-                            <span class="main-container__marquee-item">EAT GOOD FEEL GOOD EAT GOOD FEEL GOOD EAT GOOD FEEL GOOD</span>
-                            <span class="main-container__marquee-item">EAT GOOD FEEL GOOD EAT GOOD FEEL GOOD EAT GOOD FEEL GOOD</span>
+
+                            <span class="main-container__marquee-item">
+                                EAT GOOD FEEL GOOD <Image src={gallerytextlogo} alt='gallerytextlogo' className='gallerytextlogo' />
+                                EAT GOOD FEEL GOOD <Image src={gallerytextlogo} alt='gallerytextlogo' className='gallerytextlogo' />
+                                EAT GOOD FEEL GOOD <Image src={gallerytextlogo} alt='gallerytextlogo' className='gallerytextlogo' />
+                            </span>
+                            <span class="main-container__marquee-item">
+                                EAT GOOD FEEL GOOD <Image src={gallerytextlogo} alt='gallerytextlogo' className='gallerytextlogo' />
+                                EAT GOOD FEEL GOOD <Image src={gallerytextlogo} alt='gallerytextlogo' className='gallerytextlogo' />
+                                EAT GOOD FEEL GOOD <Image src={gallerytextlogo} alt='gallerytextlogo' className='gallerytextlogo' />
+                            </span>
+                            <span class="main-container__marquee-item">
+                                EAT GOOD FEEL GOOD <Image src={gallerytextlogo} alt='gallerytextlogo' className='gallerytextlogo' />
+                                EAT GOOD FEEL GOOD <Image src={gallerytextlogo} alt='gallerytextlogo' className='gallerytextlogo' />
+                                EAT GOOD FEEL GOOD <Image src={gallerytextlogo} alt='gallerytextlogo' className='gallerytextlogo' />
+                            </span>
                         </div>
                         <div aria-hidden="true" class="main-container__marquee-items">
-                            <span class="main-container__marquee-item">EAT GOOD FEEL GOOD</span>
-                            <span class="main-container__marquee-item">EAT GOOD FEEL GOOD</span>
-                            <span class="main-container__marquee-item">EAT GOOD FEEL GOOD</span>
+
+                            <span class="main-container__marquee-item">
+                                EAT GOOD FEEL GOOD <Image src={gallerytextlogo} alt='gallerytextlogo' className='gallerytextlogo' />
+                                EAT GOOD FEEL GOOD <Image src={gallerytextlogo} alt='gallerytextlogo' className='gallerytextlogo' />
+                                EAT GOOD FEEL GOOD <Image src={gallerytextlogo} alt='gallerytextlogo' className='gallerytextlogo' />
+                            </span>
+                            <span class="main-container__marquee-item">
+                                EAT GOOD FEEL GOOD <Image src={gallerytextlogo} alt='gallerytextlogo' className='gallerytextlogo' />
+                                EAT GOOD FEEL GOOD <Image src={gallerytextlogo} alt='gallerytextlogo' className='gallerytextlogo' />
+                                EAT GOOD FEEL GOOD <Image src={gallerytextlogo} alt='gallerytextlogo' className='gallerytextlogo' />
+                            </span>
+                            <span class="main-container__marquee-item">
+                                EAT GOOD FEEL GOOD <Image src={gallerytextlogo} alt='gallerytextlogo' className='gallerytextlogo' />
+                                EAT GOOD FEEL GOOD <Image src={gallerytextlogo} alt='gallerytextlogo' className='gallerytextlogo' />
+                                EAT GOOD FEEL GOOD <Image src={gallerytextlogo} alt='gallerytextlogo' className='gallerytextlogo' />
+                            </span>
                         </div>
                     </div>
                 </article>
-                <Row>
+                <Row className='gallery_row' >
                     {cardData.map((card) => (
                         <Col key={card.id} md={3} sm={6} xs={12} className="yalla_gallery_column">
                             <div className="yalla_card_gallery"
@@ -109,23 +132,60 @@ const Page = () => {
                         </Col>
                     ))}
                 </Row>
-                <article class="main-container__marquee" data-aos="fade-up" data-aos-delay="300">
+                <article class="main-container__marquee_below" data-aos="fade-up">
                     <div class="main-container__marquee-track">
                         <div class="main-container__marquee-items">
-                            <span class="main-container__marquee-item">EAT GOOD FEEL GOOD EAT GOOD FEEL GOOD EAT GOOD FEEL GOOD</span>
-                            <span class="main-container__marquee-item">EAT GOOD FEEL GOOD EAT GOOD FEEL GOOD EAT GOOD FEEL GOOD</span>
-                            <span class="main-container__marquee-item">EAT GOOD FEEL GOOD EAT GOOD FEEL GOOD EAT GOOD FEEL GOOD</span>
+
+                        <span class="main-container__marquee-item">
+                                EAT GOOD FEEL GOOD <Image src={gallerytextlogo} alt='gallerytextlogo' className='gallerytextlogo' />
+                                EAT GOOD FEEL GOOD <Image src={gallerytextlogo} alt='gallerytextlogo' className='gallerytextlogo' />
+                                EAT GOOD FEEL GOOD <Image src={gallerytextlogo} alt='gallerytextlogo' className='gallerytextlogo' />
+                            </span>
+                            <span class="main-container__marquee-item">
+                                EAT GOOD FEEL GOOD <Image src={gallerytextlogo} alt='gallerytextlogo' className='gallerytextlogo' />
+                                EAT GOOD FEEL GOOD <Image src={gallerytextlogo} alt='gallerytextlogo' className='gallerytextlogo' />
+                                EAT GOOD FEEL GOOD <Image src={gallerytextlogo} alt='gallerytextlogo' className='gallerytextlogo' />
+                            </span>
+                            <span class="main-container__marquee-item">
+                                EAT GOOD FEEL GOOD <Image src={gallerytextlogo} alt='gallerytextlogo' className='gallerytextlogo' />
+                                EAT GOOD FEEL GOOD <Image src={gallerytextlogo} alt='gallerytextlogo' className='gallerytextlogo' />
+                                EAT GOOD FEEL GOOD <Image src={gallerytextlogo} alt='gallerytextlogo' className='gallerytextlogo' />
+                            </span>
                         </div>
                         <div aria-hidden="true" class="main-container__marquee-items">
-                            <span class="main-container__marquee-item">EAT GOOD FEEL GOOD</span>
-                            <span class="main-container__marquee-item">EAT GOOD FEEL GOOD</span>
-                            <span class="main-container__marquee-item">EAT GOOD FEEL GOOD</span>
+                        <span class="main-container__marquee-item">
+                                EAT GOOD FEEL GOOD <Image src={gallerytextlogo} alt='gallerytextlogo' className='gallerytextlogo' />
+                                EAT GOOD FEEL GOOD <Image src={gallerytextlogo} alt='gallerytextlogo' className='gallerytextlogo' />
+                                EAT GOOD FEEL GOOD <Image src={gallerytextlogo} alt='gallerytextlogo' className='gallerytextlogo' />
+                            </span>
+                            <span class="main-container__marquee-item">
+                                EAT GOOD FEEL GOOD <Image src={gallerytextlogo} alt='gallerytextlogo' className='gallerytextlogo' />
+                                EAT GOOD FEEL GOOD <Image src={gallerytextlogo} alt='gallerytextlogo' className='gallerytextlogo' />
+                                EAT GOOD FEEL GOOD <Image src={gallerytextlogo} alt='gallerytextlogo' className='gallerytextlogo' />
+                            </span>
+                            <span class="main-container__marquee-item">
+                                EAT GOOD FEEL GOOD <Image src={gallerytextlogo} alt='gallerytextlogo' className='gallerytextlogo' />
+                                EAT GOOD FEEL GOOD <Image src={gallerytextlogo} alt='gallerytextlogo' className='gallerytextlogo' />
+                                EAT GOOD FEEL GOOD <Image src={gallerytextlogo} alt='gallerytextlogo' className='gallerytextlogo' />
+                            </span>
                         </div>
                     </div>
                 </article>
+
+                <div className='all_btn_product'>
+                    <button className="animated-button" data-aos="fade-up" data-aos-delay="100">
+                        <svg viewBox="0 0 24 24" className="arr-2" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" />
+                        </svg>
+                        <span className="text">View More</span>
+                        <span className="circle" />
+                        <svg viewBox="0 0 24 24" className="arr-1" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" />
+                        </svg>
+                    </button>
+                </div>
             </Container>
-            <YallaSupplier/>
-        </div>
+        </>
     );
 };
 

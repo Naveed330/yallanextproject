@@ -1,0 +1,91 @@
+/* .navbar_container_component {
+    background: rgb(102, 205, 221, 0.3);
+    width: '1280px';
+    height: 79px;
+}
+
+.navbar_links_container {
+    display: flex;
+    gap: 18px;
+}
+
+.yalla_navbar_links {
+    color: #FFF;
+    font-family: 'poppins sans-serif';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: 0.17px;
+    text-decoration: none;
+
+} */
+
+/* HomePageNavbar.css */
+
+.navbar_container_component {
+    transition: 0.3s ease, box-shadow 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Black background with opacity */
+
+}
+
+/* When the navbar is collapsed and open */
+.navbar_container_component.bg-black-opacity {
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Black background with opacity */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    /* Add a subtle shadow */
+}
+
+/* Add transition for fade-in effect */
+.navbar_container_component.fade-in {
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+    background-color: rgb(102, 205, 221, 0.3);
+}
+
+.navbar_container_component.fade-in.show {
+    opacity: 1;
+    background-color: rgb(102, 205, 221, 0.3);
+}
+
+/* Ensure that social media links and navbar links are styled properly */
+.social_media_links a img {
+    transition: transform 0.3s ease;
+}
+
+.social_media_links a img:hover {
+    transform: scale(1.1);
+}
+
+.navbar_links_container a {
+    transition: color 0.3s ease;
+    display: flex !important;
+    gap: 18px !important;
+    background-color: red;
+}
+
+.yalla_navbar_links {
+    color: #FFF;
+    font-family: 'poppins sans-serif';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: 0.17px;
+    text-decoration: none;
+    display: flex !important;
+    gap: 18px !important;
+    background-color: red;
+}
+
+@media (max-width: 992px) {
+    .navbar_logo {
+        display: none;
+    }
+
+    .social_media_links {
+        display: none !important;
+    }
+}

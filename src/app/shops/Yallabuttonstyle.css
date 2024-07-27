@@ -1,0 +1,101 @@
+.button_container {
+    margin-top: 10px;
+}
+
+.c-button {
+    color: #000;
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 0.4em 1.6em;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    z-index: 1;
+    width: 250px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.c-button--gooey {
+    color: #06c8d9;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 1px solid #06c8d9;
+    border-radius: 5px;
+    position: relative;
+    transition: all 700ms ease;
+}
+
+.all_btn_handle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.c-button--gooey .c-button__blobs {
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: -3px;
+    right: -1px;
+    z-index: -1;
+}
+
+.c-button--gooey .c-button__blobs div {
+    background-color: #06c8d9;
+    width: 34%;
+    height: 100%;
+    border-radius: 100%;
+    position: absolute;
+    transform: scale(1.4) translateY(125%) translateZ(0);
+    transition: all 700ms ease;
+}
+
+.c-button--gooey .c-button__blobs div:nth-child(1) {
+    left: -5%;
+}
+
+.c-button--gooey .c-button__blobs div:nth-child(2) {
+    left: 30%;
+    transition-delay: 60ms;
+}
+
+.c-button--gooey .c-button__blobs div:nth-child(3) {
+    left: 66%;
+    transition-delay: 25ms;
+}
+
+.c-button--gooey:hover {
+    color: #fff;
+}
+
+.c-button--gooey:hover .c-button__blobs div {
+    transform: scale(1.4) translateY(0) translateZ(0);
+}
+
+/* Responsive Styles */
+
+@media (max-width: 1024px) and (min-width:768px) {
+    .c-button {
+        width: 200px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .yalla_shop_class {
+        margin-top: 0.5em;
+    }
+}
+
+@media (max-width: 600px) {
+    .c-button {
+        width: 300px;
+    }
+    .yalla_shop_class {
+        margin-top: 0.5em;
+    }
+}

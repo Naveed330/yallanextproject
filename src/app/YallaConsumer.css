@@ -1,17 +1,104 @@
-.yalla_consumer_text{
-    color: rgba(50, 50, 50, 0.43);
-    leading-trim: both;
-    text-edge: cap;
-    font-size: 28px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 100%;
-    letter-spacing: 0.286px;
-    text-align: center;
-    margin-top: 7%;
-}
-.carousel-item {
+.image-col {
+    margin-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+.Consumer_container {
+    padding: 20px;
+}
+
+.image-col {
+    margin-bottom: 20px;
+}
+
+.image-col_one {
+    margin-top: 20px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.image-col img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-col img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.Consumer_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.image-col {
+    margin-bottom: 20px;
+}
+
+@media (max-width: 576px) {
+    .image-col {
+        margin-bottom: 10px;
+    }
+}
+
+.yalla_titile {
+    text-align: center;
+}
+
+.product_title {
+    color: Black;
+    /* Adjust the color as needed */
+}
+
+
+@media (max-width:1000px) and (min-width:570px) {
+    .image-col img {
+        width: 100%;
+        height: 85%;
+    }
+
+    .yallaConsumerRow {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
+}
+
+@media (max-width:570px) and (min-width:200px) {
+    .image-col img {
+        width: 60%;
+        height: 85%;
+    }
+
+    .yallaConsumerRow {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+/* @media (max-width:480px) {
+    .image-col img {
+        width: 60%;
+        height: 85%;
+    }
+
+}
+
+@media (max-width:400px) {
+    .image-col img {
+        width: 60%;
+        height: 85%;
+    }
+
+} */
